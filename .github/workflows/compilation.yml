@@ -15,10 +15,10 @@ jobs:
     - name: Get Source Code
       uses: actions/checkout@v4
 
-    - name: Setup Wii Graphic Libraries
+    - name: Setup Wii Development Environment
       run: |
         dkp-pacman -Syy --noconfirm
-        dkp-pacman -S wii-grrlib --noconfirm
+        dkp-pacman -S wii-dev ppc-libpng ppc-freetype --noconfirm
 
     - name: Compile TomkoWii Binary
       run: |
