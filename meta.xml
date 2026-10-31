@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>TomkoWii</name>
+  <coder>Wii Game Maker SK/CZ</coder>
+  <version>0.1-alpha</version>
+  <release_date>20261031</release_date>
+  <short_description>Tesco Racing Memorial</short_description>
+  <long_description>A standalone open-source homebrew racing game dedicated to 30 years of Tesco in Central Europe. Race with shopping carts through real hypermarkets like Nove Mesto nad Vahom with iconic mascots, Henio, and Fero Joke. Project managed completely via mobile GitHub!</long_description>
+</app>
