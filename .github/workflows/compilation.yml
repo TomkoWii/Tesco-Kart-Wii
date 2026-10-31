@@ -15,10 +15,16 @@ jobs:
     - name: Get Source Code
       uses: actions/checkout@v4
 
-    - name: Setup Wii Development Environment
+    - name: Setup Wii Environment & Dependencies
       run: |
         dkp-pacman -Syy --noconfirm
-        dkp-pacman -S wii-dev ppc-libpng ppc-freetype --noconfirm
+        dkp-pacman -S wii-dev ppc-libpng ppc-freetype ppc-libjpeg-turbo libfat-ogc --noconfirm
+
+    - name: Download and Install GRRLIB
+      run: |
+        git clone https://github.com
+        cd GRRLIB/GRRLIB
+        make clean all install
 
     - name: Compile TomkoWii Binary
       run: |
