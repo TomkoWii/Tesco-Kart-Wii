@@ -20,12 +20,8 @@ jobs:
         dkp-pacman -Syy --noconfirm
         dkp-pacman -S wii-grrlib --noconfirm
 
-    - name: Compile TomkoWii Game
-      run: make
-
-    - name: Upload compiled Wii Executable
-      uses: actions/upload-artifact@v4
-      with:
-        name: TomkoWii-Executable
-        path: TomkoWii.dol
+    - name: Compile Game
+      run: |
+        make clean
+        make
         
