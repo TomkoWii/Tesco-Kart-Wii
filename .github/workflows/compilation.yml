@@ -1,10 +1,10 @@
-name: Build TomkoWii
+name: TomkoWii Compiler
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -12,16 +12,22 @@ jobs:
     container: devkitpro/devkitppc:latest
 
     steps:
-    - name: Checkout repository
+    - name: Get Source Code
       uses: actions/checkout@v4
 
-    - name: Install GRRLIB Dependency
+    - name: Setup Wii Graphic Libraries
       run: |
         dkp-pacman -Syy --noconfirm
         dkp-pacman -S wii-grrlib --noconfirm
 
-    - name: Compile Game
+    - name: Compile TomkoWii Binary
       run: |
-        make clean
-        make
+        make -f Makefile clean
+        make -f Makefile
+
+    - name: Save Wii Executable
+      uses: actions/upload-artifact@v4
+      with:
+        name: TomkoWii-Release
+        path: TomkoWii.dol
         
