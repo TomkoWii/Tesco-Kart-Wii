@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <wiiuse/wpad.h>
 #include <math.h>
 #include "../include/characters.h"
 #include "../include/tracks.h"
