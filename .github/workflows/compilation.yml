@@ -22,7 +22,7 @@ jobs:
 
     - name: Download and Install GRRLIB
       run: |
-        git clone https://github.com
+        git clone https://github.com/GRRLIB/GRRLIB
         cd GRRLIB/GRRLIB
         make clean all install
 
