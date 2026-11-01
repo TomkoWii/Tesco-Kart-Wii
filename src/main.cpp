@@ -1,4 +1,3 @@
-#include <grrlib.h>
 #include <stdlib.h>
 #include <wiiuse/wpad.h>
 #include <math.h>
